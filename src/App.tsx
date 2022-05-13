@@ -10,7 +10,7 @@ import { itemList } from './data/itemsList';
 import { InfoItem } from './components/InfoItem';
 import { Button } from './components/Button/index';
 import { GridItem } from './components/GridItem';
-import { formatTimeElapsed } from './helpers/FormatTimeElapsed';
+import { FormatTimeElapsed } from './helpers/FormatTimeElapsed';
 
 function App() {
   const [playing, setPlaying] = useState<boolean>(false);
@@ -121,7 +121,7 @@ function App() {
           <img src={Logo} alt='Logo' width={200}></img>
         </C.LogoLink>
         <C.InfoArea>
-          <InfoItem label='Tempo' value={formatTimeElapsed(timeElapsed)} />
+          <InfoItem label='Tempo' value={FormatTimeElapsed(timeElapsed)} />
           <InfoItem label='Movimentos' value={moveCount.toString()} />
         </C.InfoArea>
         <Button
